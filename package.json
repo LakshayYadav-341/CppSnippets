@@ -3,10 +3,10 @@
   "displayName": "C++ Snippets",
   "description": "Custom C++ code snippets for VSCode",
   "version": "0.0.1",
-  "publisher": "your-publisher-name",
+  "publisher": "Lakshay-Yadav",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lakshay/CppSnippets"
+    "url": "https://github.com/LakshayYadav-341/CppSnippets"
   },
   "engines": {
     "vscode": "^1.89.0"

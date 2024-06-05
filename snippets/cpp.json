@@ -1,24 +1,279 @@
 {
-    "Print to console": {
-      "prefix": "cout",
-      "body": [
-        "#include <iostream>",
-        "",
-        "int main() {",
-        "  std::cout << \"$1\" << std::endl;",
-        "  return 0;",
-        "}"
-      ],
-      "description": "Print a message to the console"
-    },
-    "For loop": {
-      "prefix": "forloop",
-      "body": [
-        "for (int i = 0; i < ${1:10}; i++) {",
-        "  $2",
-        "}"
-      ],
-      "description": "For loop"
-    }
+  "Print to console": {
+    "prefix": "cppStarter",
+    "body": [
+      "#include <iostream>",
+      "#include <bits/stdc++.h>",
+      "",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "  $1",
+      "  return 0;",
+      "}"
+    ],
+    "description": "Print a message to the console"
+  },
+  "For loop": {
+    "prefix": "forloop",
+    "body": [
+      "for (int i = 0; i < arr.size(); i++) {",
+      "  $1",
+      "}"
+    ],
+    "description": "For loop"
+  },
+  "Input and Output": {
+    "prefix": "io",
+    "body": [
+      "int n;",
+      "cin >> n;",
+      "vector<int> arr(n);",
+      "for (int i = 0; i < n; i++) {",
+      "  cin >> arr[i];",
+      "}"
+    ],
+    "description": "Input and Output"
+  },
+  "Vector Declaration": {
+    "prefix": "vdecl",
+    "body": [
+      "vector<int> v;",
+      "vector<vector<int>> vv;",
+      "vector<pair<int, int>> vp;",
+      "$1"
+    ],
+    "description": "Vector Declaration"
+  },
+  "Map Declaration": {
+    "prefix": "mapdecl",
+    "body": [
+      "map<int, int> mp;",
+      "unordered_map<int, int> ump;",
+      "$1"
+    ],
+    "description": "Map Declaration"
+  },
+  "Sort Vector": {
+    "prefix": "sort",
+    "body": [
+      "sort(arr.begin(), arr.end());",
+      "$1"
+    ],
+    "description": "Sort Vector"
+  },
+  "Reverse Vector": {
+    "prefix": "reverse",
+    "body": [
+      "reverse(arr.begin(), arr.end());",
+      "$1"
+    ],
+    "description": "Reverse Vector"
+  },
+  "Binary Search": {
+    "prefix": "binarysearch",
+    "body": [
+      "binary_search(arr.begin(), arr.end(), $1);"
+    ],
+    "description": "Binary Search"
+  },
+  "Set Declaration": {
+    "prefix": "setdecl",
+    "body": [
+      "set<int> st;",
+      "unordered_set<int> ust;",
+      "$1"
+    ],
+    "description": "Set Declaration"
+  },
+  "Pair Declaration": {
+    "prefix": "pairdecl",
+    "body": [
+      "pair<int, int> p;",
+      "$1"
+    ],
+    "description": "Pair Declaration"
+  },
+  "Queue Declaration": {
+    "prefix": "qdecl",
+    "body": [
+      "queue<int> q;",
+      "priority_queue<int> pq;",
+      "$1"
+    ],
+    "description": "Queue Declaration"
+  },
+  "Stack Declaration": {
+    "prefix": "stackdecl",
+    "body": [
+      "stack<int> s;",
+      "$1"
+    ],
+    "description": "Stack Declaration"
+  },
+  "Using Iterator": {
+    "prefix": "iterator",
+    "body": [
+      "for (auto it = arr.begin(); it != arr.end(); it++) {",
+      "  $1",
+      "}"
+    ],
+    "description": "Using Iterator"
+  },
+  "Find Maximum Element": {
+    "prefix": "max",
+    "body": [
+      "auto maxElement = max_element(arr.begin(), arr.end());",
+      "$1"
+    ],
+    "description": "Find Maximum Element"
+  },
+  "Find Minimum Element": {
+    "prefix": "min",
+    "body": [
+      "auto minElement = min_element(arr.begin(), arr.end());",
+      "$1"
+    ],
+    "description": "Find Minimum Element"
+  },
+  "Count Occurrences": {
+    "prefix": "count",
+    "body": [
+      "int count = count(arr.begin(), arr.end(), $1);"
+    ],
+    "description": "Count Occurrences"
+  },
+  "Sum of Elements": {
+    "prefix": "sum",
+    "body": [
+      "int sum = accumulate(arr.begin(), arr.end(), 0);"
+    ],
+    "description": "Sum of Elements"
+  },
+  "Replace All Occurrences": {
+    "prefix": "replace",
+    "body": [
+      "replace(arr.begin(), arr.end(), oldValue, newValue);"
+    ],
+    "description": "Replace All Occurrences"
+  },
+  "Remove Duplicates": {
+    "prefix": "unique",
+    "body": [
+      "arr.erase(unique(arr.begin(), arr.end()), arr.end());"
+    ],
+    "description": "Remove Duplicates"
+  },
+  "Reverse a String": {
+    "prefix": "revstr",
+    "body": [
+      "reverse(str.begin(), str.end());"
+    ],
+    "description": "Reverse a String"
+  },
+  "Convert String to Integer": {
+    "prefix": "stoi",
+    "body": [
+      "int intValue = stoi(str);"
+    ],
+    "description": "Convert String to Integer"
+  },
+  "Convert Integer to String": {
+    "prefix": "itos",
+    "body": [
+      "string strValue = to_string(intValue);"
+    ],
+    "description": "Convert Integer to String"
+  },
+  "Find First Occurrence": {
+    "prefix": "find",
+    "body": [
+      "auto it = find(arr.begin(), arr.end(), $1);"
+    ],
+    "description": "Find First Occurrence"
+  },
+  "Check if Element Exists": {
+    "prefix": "exists",
+    "body": [
+      "bool exists = find(arr.begin(), arr.end(), $1) != arr.end();"
+    ],
+    "description": "Check if Element Exists"
+  },
+  "Find Last Occurrence": {
+    "prefix": "rfind",
+    "body": [
+      "auto it = find(arr.rbegin(), arr.rend(), $1);"
+    ],
+    "description": "Find Last Occurrence"
+  },
+  "Concatenate Strings": {
+    "prefix": "concat",
+    "body": [
+      "string result = str1 + str2;"
+    ],
+    "description": "Concatenate Strings"
+  },
+  "String Length": {
+    "prefix": "strlen",
+    "body": [
+      "int length = str.size();"
+    ],
+    "description": "String Length"
+  },
+  "Substring": {
+    "prefix": "substr",
+    "body": [
+      "string sub = str.substr(startIndex, length);"
+    ],
+    "description": "Substring"
+  },
+  "Find First Occurrence of Character": {
+    "prefix": "findchar",
+    "body": [
+      "auto it = find(str.begin(), str.end(), '$1');"
+    ],
+    "description": "Find First Occurrence of Character"
+  },
+  "Find Last Occurrence of Character": {
+    "prefix": "rfindchar",
+    "body": [
+      "auto it = find(str.rbegin(), str.rend(), '$1');"
+    ],
+    "description": "Find Last Occurrence of Character"
+  },
+  "Convert Character to Integer": {
+    "prefix": "ctoi",
+    "body": [
+      "int intValue = int(charValue);"
+    ],
+    "description": "Convert Character to Integer"
+  },
+  "Convert Integer to Character": {
+    "prefix": "itoc",
+    "body": [
+      "char charValue = char(intValue);"
+    ],
+    "description": "Convert Integer to Character"
+  },
+  "Check if String is Palindrome": {
+    "prefix": "palindrome",
+    "body": [
+      "bool isPalindrome = equal(str.begin(), str.begin() + str.size() / 2, str.rbegin());"
+    ],
+    "description": "Check if String is Palindrome"
+  },
+  "Convert String to Lowercase": {
+    "prefix": "tolower",
+    "body": [
+      "transform(str.begin(), str.end(), str.begin(), ::tolower);"
+    ],
+    "description": "Convert String to Lowercase"
+  },
+  "Convert String to Uppercase": {
+    "prefix": "toupper",
+    "body": [
+      "transform(str.begin(), str.end(), str.begin(), ::toupper);"
+    ],
+    "description": "Convert String to Uppercase"
   }
-  
+}
